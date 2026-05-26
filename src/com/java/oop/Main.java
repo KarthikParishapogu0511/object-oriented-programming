@@ -18,7 +18,6 @@ public class Main {
         product.discountPercentage = 10.5F;
         product.rating = 4.5F;
         product.isStockAvailable = true;
-
          */
 
         System.out.println("id :" +product.id);
@@ -29,6 +28,17 @@ public class Main {
         System.out.println("Is Available : " + product.isStockAvailable);
         System.out.println("-----------------------");
 
+
+        Customer customer1 = new Customer();
+
+        System.out.println("Customer id : " + customer1.id);
+        System.out.println("Customer name : " + customer1.name);
+        System.out.println("Customer Age : " + customer1.age);
+        System.out.println("Customer mobileNumber : " + customer1.mobileNumber);
+        System.out.println("Customer Email : " + customer1.email);
+        System.out.println("Customer Address : " + customer1.address);
+        System.out.println("Customer isAvailable : " + customer1.isAvailable);
+        System.out.println("------------------------------");
 
         Product product2;
         product2 = new Product(2,"OnePlus Nord 5G lite",134567,12.5F,4.5F,false);
@@ -50,6 +60,17 @@ public class Main {
         System.out.println("Discount Percentage : " + product2.discountPercentage);
         System.out.println("Rating : " + product2.rating);
         System.out.println("Is Available : " + product2.isStockAvailable);
+        System.out.println("--------------------------");
 
+        Customer customer2;
+        customer2 = new Customer(102,"Farooq",44,876895443,"farooq234@gmail.com","Gandhi Road",false);
+
+        System.out.println("Customer Id : " + customer2.id);
+        System.out.println("Customer Name : " + customer2.name);
+        System.out.println("Customer Age : " + customer2.age);
+        System.out.println("Customer mobileNumber : "+ customer2.mobileNumber);
+        System.out.println("Customer email : " + customer2.email);
+        System.out.println("Customer address : " + customer2.address);
+        System.out.println("Customer isAvailable : " + customer2.isAvailable);
     }
 }

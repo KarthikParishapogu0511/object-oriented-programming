@@ -93,6 +93,29 @@ public class Main {
         System.out.println("Is payment Closed ? : " + order2.isPaymentClosed);
         System.out.println("-------------------------");
 
+        Customer customer3;
+        customer3 = new Customer(103,"Rahul",32,876667443,"rahul234@gmail.com","Nehru Road",false);
+
+        System.out.println("Customer Id : " + customer3.id);
+        System.out.println("Customer Name : " + customer3.name);
+        System.out.println("Customer Age : " + customer3.age);
+        System.out.println("Customer mobileNumber : "+ customer3.mobileNumber);
+        System.out.println("Customer email : " + customer3.email);
+        System.out.println("Customer address : " + customer3.address);
+        System.out.println("Customer isAvailable : " + customer3.isAvailable);
+        System.out.println("------------------------------");
+
+        Order order3 = new Order(1003,103,7625.38F,"26/05/2026",true,"Debit Card",true);
+
+        System.out.println("Order Id : " + order3.id);
+        System.out.println("Customer Id : " + order3.customerId);
+        System.out.println("Order Amount : " + order3.amount);
+        System.out.println("Order Date : " + order3.date);
+        System.out.println("Is Order placed ? : " + order3.isOrderPlaced);
+        System.out.println("Payment Type : " + order3.paymentType);
+        System.out.println("Is payment Closed ? : " + order3.isPaymentClosed);
+        System.out.println("-------------------------");
+
 
     }
 }

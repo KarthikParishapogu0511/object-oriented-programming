@@ -1,5 +1,7 @@
 package com.java.oop;
 
+import java.util.List;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -19,12 +21,15 @@ public class Main {
          product.isStockAvailable = true;
         */
 
-        System.out.println("id :" +product.id);
+       /* System.out.println("id :" +product.id);
         System.out.println("name : " + product.name);
         System.out.println("mrp :"+ product.maxRetailPrice);
         System.out.println("Discount Percentage : " + product.discountPercentage);
         System.out.println("Rating : " + product.rating);
-        System.out.println("Is Available : " + product.isStockAvailable);
+        System.out.println("Is Available : " + product.isStockAvailable);*/
+
+        // method calling
+        product.displayProductDetails();
         System.out.println("-----------------------");
 
 
@@ -62,12 +67,22 @@ public class Main {
          product2.isStockAvailable = false;
         */
 
-        System.out.println("id :" +product2.id);
-        System.out.println("name : " + product2.name);
-        System.out.println("mrp :"+ product2.maxRetailPrice);
-        System.out.println("Discount Percentage : " + product2.discountPercentage);
-        System.out.println("Rating : " + product2.rating);
-        System.out.println("Is Available : " + product2.isStockAvailable);
+//        System.out.println("id :" +product2.id);
+//        System.out.println("name : " + product2.name);
+//        System.out.println("mrp :"+ product2.maxRetailPrice);
+//        System.out.println("Discount Percentage : " + product2.discountPercentage);
+//        System.out.println("Rating : " + product2.rating);
+//        System.out.println("Is Available : " + product2.isStockAvailable);
+
+        product2.displayProductDetails();
+        product2.displayProductDetailsByCompany("Nvidia");
+        product2.displayProductsByManufacturingYear(1996);
+        product2.displayProductsByCompanyNameAndManufacturingYear("Nvidia",1996);
+        int productCount = product2.getProductsCount();
+        System.out.println("Product Count : " + productCount);
+        long totalProductValue = product2.getTotalProductsValue();
+        System.out.println("Total Product Value : " + totalProductValue);
+        List<Product> productList = product2.filterProductsBasedOnPriceRange(10000,120000);
         System.out.println("--------------------------");
 
         Customer customer2;

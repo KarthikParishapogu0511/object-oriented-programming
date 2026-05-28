@@ -1,5 +1,7 @@
 package com.java.oop;
 
+import java.util.List;
+
 public class Product {
 
 
@@ -27,7 +29,8 @@ public class Product {
         }
         /* Here below this Product has a parameter called id and all others are Local variables */
 
-      /* Product(int id ,String name,int maxRetailPrice,float discountPercentage,float rating,boolean isStockAvailable){
+      /* Argument Constructor
+      Product(int id ,String name,int maxRetailPrice,float discountPercentage,float rating,boolean isStockAvailable){
                 this.id  = id;
                 this.name = name;
                 this.maxRetailPrice = maxRetailPrice;
@@ -48,4 +51,55 @@ public class Product {
                 this.rating = rating;
                 this.isStockAvailable = isStockAvailable;
         }
+        //It's a method without any returnType (void) or output and also without any parameters or inputs
+        void displayProductDetails(){
+                System.out.println("id :" + id);
+                System.out.println("name : " + name);
+                System.out.println("mrp :"+ maxRetailPrice);
+                System.out.println("Discount Percentage : " + discountPercentage);
+                System.out.println("Rating : " + rating);
+                System.out.println("Is Available : " + isStockAvailable);
+        }
+
+        // with arguments and without return type
+
+        void displayProductDetailsByCompany(String companyName){
+                System.out.println("Product by Company : " + companyName);
+        }
+
+        void displayProductsByManufacturingYear(int year){
+                System.out.println("Products by manufactured year :" + year);
+        }
+
+        void displayProductsByCompanyNameAndManufacturingYear(String companyName,int year){
+                System.out.println("Products by Company Name and Manufactured Year : " + companyName + " " + year);
+        }
+
+        //with return type and without arguments
+        //total count of products
+
+        //if you want to get any data always start with keyword get
+        int getProductsCount(){
+                return 10;
+        }
+
+        long getTotalProductsValue(){
+                return 1222666663888844567L;
+        }
+
+        //highest rated Product
+        Product getHighestRatedProduct(){
+                return new Product();
+        }
+
+        //sort the products based on rating which should return a list of products
+        List<Product> getSortProductsBasedOnRating(){
+                return null;
+        }
+
+        //filter the Products based on min and max Price Range
+        List<Product> filterProductsBasedOnPriceRange(int min,int max){
+                return null;
+        }
+
 }

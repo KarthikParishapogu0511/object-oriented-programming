@@ -30,4 +30,32 @@ public class Customer {
         this.address = address;
         this.isAvailable = isAvailable;
     }
+
+    void printCustomerDetails(){
+        System.out.println("Customer Id : " + id);
+        System.out.println("Customer Name : " + name);
+        System.out.println("Customer Age : " + age);
+        System.out.println("Customer mobileNumber : "+ mobileNumber);
+        System.out.println("Customer email : " + email);
+        System.out.println("Customer address : " + address);
+        System.out.println("Customer isAvailable : " + isAvailable);
+    }
+    void updateCustomerAddress(String address){
+        this.address =address;
+    }
+
+    void isCustomerActiveStatus(){
+        System.out.println("Is Customer Active Status : " + isAvailable);
+    }
+
+    void deActivateCustomerAccount(){
+        isAvailable  = false;
+        System.out.println("deActivate Customer Account : " + isAvailable);
+
+    }
+    void validateCustomerMobileNumber(){
+        //if(mobileNumber.hasNextLong()){
+
+
+    }
 }

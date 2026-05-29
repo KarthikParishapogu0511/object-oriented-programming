@@ -21,12 +21,12 @@ public class Main {
          product.isStockAvailable = true;
         */
 
-       /* System.out.println("id :" +product.id);
+        System.out.println("id :" +product.id);
         System.out.println("name : " + product.name);
         System.out.println("mrp :"+ product.maxRetailPrice);
         System.out.println("Discount Percentage : " + product.discountPercentage);
         System.out.println("Rating : " + product.rating);
-        System.out.println("Is Available : " + product.isStockAvailable);*/
+        System.out.println("Is Available : " + product.isStockAvailable);
 
         // method calling
         product.displayProductDetails();
@@ -67,12 +67,13 @@ public class Main {
          product2.isStockAvailable = false;
         */
 
-//        System.out.println("id :" +product2.id);
-//        System.out.println("name : " + product2.name);
-//        System.out.println("mrp :"+ product2.maxRetailPrice);
-//        System.out.println("Discount Percentage : " + product2.discountPercentage);
-//        System.out.println("Rating : " + product2.rating);
-//        System.out.println("Is Available : " + product2.isStockAvailable);
+        System.out.println("id :" +product2.id);
+        System.out.println("name : " + product2.name);
+        System.out.println("mrp :"+ product2.maxRetailPrice);
+        System.out.println("Discount Percentage : " + product2.discountPercentage);
+        System.out.println("Rating : " + product2.rating);
+        System.out.println("Is Available : " + product2.isStockAvailable);
+
 
         product2.displayProductDetails();
         product2.displayProductDetailsByCompany("Nvidia");
@@ -83,6 +84,17 @@ public class Main {
         long totalProductValue = product2.getTotalProductsValue();
         System.out.println("Total Product Value : " + totalProductValue);
         List<Product> productList = product2.filterProductsBasedOnPriceRange(10000,120000);
+        //System.out.println(productList);
+        System.out.println("Company Name : " + Product.COMPANY_NAME);
+        System.out.println("Company Email : " + Product.COMPANY_EMAIL);
+        /*
+        System.out.println("Company Name via Instance : " + product2.companyName);
+        product2.companyName = "Samsung";
+        System.out.println("Company Name via Instance : " + product2.companyName);
+        System.out.println("Company Name : " + Product.companyName);
+        */
+        Product.displayCompanyDetails();
+
         System.out.println("--------------------------");
 
         Customer customer2;
@@ -96,6 +108,13 @@ public class Main {
         System.out.println("Customer address : " + customer2.address);
         System.out.println("Customer isAvailable : " + customer2.isAvailable);
         System.out.println("------------------------------");
+
+        customer2.printCustomerDetails();
+        System.out.println("-----------------");
+        customer2.updateCustomerAddress("Indhra Nagar");
+        customer2.printCustomerDetails();
+        customer2.isCustomerActiveStatus();
+        customer2.deActivateCustomerAccount();
 
         Order order2 = new Order(1002,102,5489.62F,"25/05/2026",true,"Debit Card",true);
 

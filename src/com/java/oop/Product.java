@@ -5,6 +5,11 @@ import java.util.List;
 public class Product {
 
 
+        // static is a class specific and also we have to specify the value and it's common to every instance
+        final static String COMPANY_NAME = "Amazon";
+        final static  String COMPANY_EMAIL = "support@gmail.com";
+        final static  String COMPANY_PHONE_NO = "1234567890";
+
         //state
         //Product state -> id,maxRetailPrice,discountPercentage,rating,isStockAvailable
         //Always have to write  states first then any other
@@ -101,5 +106,12 @@ public class Product {
         List<Product> filterProductsBasedOnPriceRange(int min,int max){
                 return null;
         }
+
+        static void  displayCompanyDetails(){
+                System.out.println("Company Name : " + COMPANY_NAME);
+                System.out.println("Company Email : " + COMPANY_EMAIL);
+                System.out.println("Company Phone No : " + COMPANY_PHONE_NO);
+        }
+
 
 }

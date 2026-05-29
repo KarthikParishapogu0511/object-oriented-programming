@@ -29,4 +29,38 @@ public class Order {
         this.paymentType = paymentType;
         this.isPaymentClosed = isPaymentClosed;
     }
+
+    void calculateTotalAmount(){
+        float stateTax = 0.05F;
+        float centralTax = 0.05F;
+
+        float  stateTaxAmount = amount * stateTax;
+        float centralTaxAmount = amount * centralTax;
+        float totalAmount = amount + stateTaxAmount + centralTaxAmount;
+        System.out.println("Total Amount : " + totalAmount);
+    }
+    boolean updateOrderStatus(){
+        return isOrderPlaced;
+    }
+
+    boolean isOrderPaid(){
+        return isPaymentClosed;
+    }
+
+    void OrderCancelled(){
+        isOrderPlaced = false;
+        System.out.println("Order cancelled ");
+    }
+
+    void displayOrderSummary(){
+        System.out.println("Order Id : " + id);
+        System.out.println("Customer Id : " + customerId);
+        System.out.println("Order Amount : " + amount);
+        System.out.println("Order Date : " + date);
+        System.out.println("Is Order placed ? : " + isOrderPlaced);
+        System.out.println("Payment Type : " + paymentType);
+        System.out.println("Is payment Closed ? : " + isPaymentClosed);
+        System.out.println("-------------------------");
+    }
+
 }

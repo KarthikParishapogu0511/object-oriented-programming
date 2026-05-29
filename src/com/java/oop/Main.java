@@ -32,29 +32,6 @@ public class Main {
         product.displayProductDetails();
         System.out.println("-----------------------");
 
-
-        Customer customer1 = new Customer();
-
-        System.out.println("Customer id : " + customer1.id);
-        System.out.println("Customer name : " + customer1.name);
-        System.out.println("Customer Age : " + customer1.age);
-        System.out.println("Customer mobileNumber : " + customer1.mobileNumber);
-        System.out.println("Customer Email : " + customer1.email);
-        System.out.println("Customer Address : " + customer1.address);
-        System.out.println("Customer isAvailable : " + customer1.isAvailable);
-        System.out.println("------------------------------");
-
-        Order order1 = new Order();
-        System.out.println("Order Id : " + order1.id);
-        System.out.println("Customer Id : " + order1.customerId);
-        System.out.println("Order Amount : " + order1.amount);
-        System.out.println("Order Date : " + order1.date);
-        System.out.println("Is Order placed ? : " + order1.isOrderPlaced);
-        System.out.println("Payment Type : " + order1.paymentType);
-        System.out.println("Is payment Closed ? : " + order1.isPaymentClosed);
-        System.out.println("-------------------------");
-
-
         Product product2;
         product2 = new Product(2,"OnePlus Nord 5G lite",134567,12.5F,4.5F,false);
         /*
@@ -73,7 +50,7 @@ public class Main {
         System.out.println("Discount Percentage : " + product2.discountPercentage);
         System.out.println("Rating : " + product2.rating);
         System.out.println("Is Available : " + product2.isStockAvailable);
-
+        System.out.println("--------------------------");
 
         product2.displayProductDetails();
         product2.displayProductDetailsByCompany("Nvidia");
@@ -97,6 +74,50 @@ public class Main {
 
         System.out.println("--------------------------");
 
+        Product product3 ;
+        product3 = new Product();
+
+        System.out.println("id :" +product3.id);
+        System.out.println("name : " + product3.name);
+        System.out.println("mrp :"+ product3.maxRetailPrice);
+        System.out.println("Discount Percentage : " + product3.discountPercentage);
+        System.out.println("Rating : " + product3.rating);
+        System.out.println("Is Available : " + product3.isStockAvailable);
+        System.out.println("--------------------------");
+
+        Product product4 ;
+        product4 = new Product(6574,"Lenovo 54G Lite",26754,11.5F,4.3F,true);
+
+        System.out.println("id :" +product4.id);
+        System.out.println("name : " + product4.name);
+        System.out.println("mrp :"+ product4.maxRetailPrice);
+        System.out.println("Discount Percentage : " + product4.discountPercentage);
+        System.out.println("Rating : " + product4.rating);
+        System.out.println("Is Available : " + product4.isStockAvailable);
+        System.out.println("--------------------------");
+
+        Product product5 ;
+        product5 = new Product();
+
+        System.out.println("id :" +product5.id);
+        System.out.println("name : " + product5.name);
+        System.out.println("mrp :"+ product5.maxRetailPrice);
+        System.out.println("Discount Percentage : " + product5.discountPercentage);
+        System.out.println("Rating : " + product5.rating);
+        System.out.println("Is Available : " + product5.isStockAvailable);
+        System.out.println("--------------------------");
+
+        Customer customer1 = new Customer();
+
+        System.out.println("Customer id : " + customer1.id);
+        System.out.println("Customer name : " + customer1.name);
+        System.out.println("Customer Age : " + customer1.age);
+        System.out.println("Customer mobileNumber : " + customer1.mobileNumber);
+        System.out.println("Customer Email : " + customer1.email);
+        System.out.println("Customer Address : " + customer1.address);
+        System.out.println("Customer isAvailable : " + customer1.isAvailable);
+        System.out.println("------------------------------");
+
         Customer customer2;
         customer2 = new Customer(102,"Farooq",44,876895443,"farooq234@gmail.com","Gandhi Road",false);
 
@@ -116,17 +137,6 @@ public class Main {
         customer2.isCustomerActiveStatus();
         customer2.deActivateCustomerAccount();
 
-        Order order2 = new Order(1002,102,5489.62F,"25/05/2026",true,"Debit Card",true);
-
-        System.out.println("Order Id : " + order2.id);
-        System.out.println("Customer Id : " + order2.customerId);
-        System.out.println("Order Amount : " + order2.amount);
-        System.out.println("Order Date : " + order2.date);
-        System.out.println("Is Order placed ? : " + order2.isOrderPlaced);
-        System.out.println("Payment Type : " + order2.paymentType);
-        System.out.println("Is payment Closed ? : " + order2.isPaymentClosed);
-        System.out.println("-------------------------");
-
         Customer customer3;
         customer3 = new Customer(103,"Rahul",32,876667443,"rahul234@gmail.com","Nehru Road",false);
 
@@ -139,8 +149,53 @@ public class Main {
         System.out.println("Customer isAvailable : " + customer3.isAvailable);
         System.out.println("------------------------------");
 
-        Order order3 = new Order(1003,103,7625.38F,"26/05/2026",true,"Debit Card",true);
+        Customer customer4;
+        customer4 = new Customer(104,"Raju",42,7068926443L,"raju98@gmail.com","Raji Street",false);
 
+        System.out.println("Customer Id : " + customer4.id);
+        System.out.println("Customer Name : " + customer4.name);
+        System.out.println("Customer Age : " + customer4.age);
+        System.out.println("Customer mobileNumber : "+ customer4.mobileNumber);
+        System.out.println("Customer email : " + customer4.email);
+        System.out.println("Customer address : " + customer4.address);
+        System.out.println("Customer isAvailable : " + customer4.isAvailable);
+        System.out.println("------------------------------");
+
+        Customer customer5;
+        customer5 = new Customer(105,"Jai",27,8798174430L,"jai240@gmail.com","Modi Road",true);
+
+        System.out.println("Customer Id : " + customer5.id);
+        System.out.println("Customer Name : " + customer5.name);
+        System.out.println("Customer Age : " + customer5.age);
+        System.out.println("Customer mobileNumber : "+ customer5.mobileNumber);
+        System.out.println("Customer email : " + customer5.email);
+        System.out.println("Customer address : " + customer5.address);
+        System.out.println("Customer isAvailable : " + customer5.isAvailable);
+        System.out.println("------------------------------");
+
+        // no-args Constructor
+        Order order1 = new Order();
+        System.out.println("Order Id : " + order1.id);
+        System.out.println("Customer Id : " + order1.customerId);
+        System.out.println("Order Amount : " + order1.amount);
+        System.out.println("Order Date : " + order1.date);
+        System.out.println("Is Order placed ? : " + order1.isOrderPlaced);
+        System.out.println("Payment Type : " + order1.paymentType);
+        System.out.println("Is payment Closed ? : " + order1.isPaymentClosed);
+        System.out.println("-------------------------");
+
+        // args -Constructor
+        Order order2 = new Order(1002,102,5489.62F,"25/05/2026",true,"Debit Card",true);
+        System.out.println("Order Id : " + order2.id);
+        System.out.println("Customer Id : " + order2.customerId);
+        System.out.println("Order Amount : " + order2.amount);
+        System.out.println("Order Date : " + order2.date);
+        System.out.println("Is Order placed ? : " + order2.isOrderPlaced);
+        System.out.println("Payment Type : " + order2.paymentType);
+        System.out.println("Is payment Closed ? : " + order2.isPaymentClosed);
+        System.out.println("-------------------------");
+
+        Order order3 = new Order(1003,103,7625.38F,"26/05/2026",true,"Debit Card",true);
         System.out.println("Order Id : " + order3.id);
         System.out.println("Customer Id : " + order3.customerId);
         System.out.println("Order Amount : " + order3.amount);
@@ -150,6 +205,26 @@ public class Main {
         System.out.println("Is payment Closed ? : " + order3.isPaymentClosed);
         System.out.println("-------------------------");
 
+
+        Order order4 = new Order(1004,104,32489.62F,"24/05/2026",true,"Online Payment",true);
+        System.out.println("Order Id : " + order4.id);
+        System.out.println("Customer Id : " + order4.customerId);
+        System.out.println("Order Amount : " + order4.amount);
+        System.out.println("Order Date : " + order4.date);
+        System.out.println("Is Order placed ? : " + order4.isOrderPlaced);
+        System.out.println("Payment Type : " + order4.paymentType);
+        System.out.println("Is payment Closed ? : " + order4.isPaymentClosed);
+        System.out.println("-------------------------");
+
+        Order order5 = new Order(1005,105,54795.38F,"28/05/2026",true,"Cash",true);
+        System.out.println("Order Id : " + order5.id);
+        System.out.println("Customer Id : " + order5.customerId);
+        System.out.println("Order Amount : " + order5.amount);
+        System.out.println("Order Date : " + order5.date);
+        System.out.println("Is Order placed ? : " + order5.isOrderPlaced);
+        System.out.println("Payment Type : " + order5.paymentType);
+        System.out.println("Is payment Closed ? : " + order5.isPaymentClosed);
+        System.out.println("-------------------------");
 
     }
 }

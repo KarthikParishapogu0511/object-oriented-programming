@@ -90,11 +90,29 @@ public class CustomersArray {
     }
 
     public static Customer[] sortCustomersByName(Customer[] customers){
+
         return null;
     }
 
-    public static int customersWithAgeGreaterThan(Customer[] customers,int age){
-        return 0;
+    public static Customer[] customersWithAgeGreaterThan(Customer[] customers,int age){
+        //100 customers out of which 25 are 20 years old
+        //1. how many are there count
+        //2.  create an array of size that count
+        //3. iterate
+//        int ageGreaterThan =0;
+//        for(Customer customer : customers){
+//            if(customer.age > age){
+//                ageGreaterThan++;
+//            }
+//        }
+//        Customer[] customer1 = new Customer[ageGreaterThan];
+//        for(Customer customer : customers){
+//            if(customer.age > age){
+//                customer1[]
+//            }
+//        }
+        return null;
+
     }
 
     public  static int customersWithAgeBetween(Customer[] customers,int minAge,int maxAge){

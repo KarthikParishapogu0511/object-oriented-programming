@@ -1,5 +1,7 @@
 package com.java.oop.strings;
 
+import com.java.oop.Customer;
+
 public class Main {
 
 //    static  String name; //instance variable (stores in  heap) it would be default initialized
@@ -48,7 +50,40 @@ public class Main {
             System.out.println("Invalid login");
         }
 
-        System.out.println(username.length());
+        if(username.length() > 5 && username.length() < 10){
+            System.out.println("Username length is Valid");
+        }else {System.out.println("Username length  is Invalid");}
+
+
+        //Regular Expression
+        //username validation Alpha Numeric with _
+        String regex = "^[a-zA-Z0-9_]+$";
+        if(username.matches(regex)){
+            System.out.println("Valid Username");
+        }else{
+            System.out.println("Invalid Username");
+        }
+
+        String customerData = "101,john,43,8776542454,john@gmail.com,swamiRoad,true";
+        String[] split = customerData.split(",");
+
+        Customer customer = new Customer(Integer.parseInt(split[0]),split[1],Integer.parseInt(split[2]),Long.parseLong(split[3]),split[4],split[5],Boolean.parseBoolean(split[6]));
+        System.out.println("ID : " + customer.id);
+        System.out.println("Name : " + customer.name);
+        System.out.println("Age : " + customer.age);
+        System.out.println("Phn No : " + customer.mobileNumber);
+        System.out.println("Email : " + customer.email);
+        System.out.println("Address : " + customer.email);
+        System.out.println("Is Available : " + customer.isAvailable);
+
+
+        String email = "       karthik123@gmail.com  ";
+        if(email.trim().equals("karthik123@gmail.com")){
+            System.out.println("Valid Email");
+
+        }else{
+            System.out.println("Invalid Email");
+        }
 
 
     }

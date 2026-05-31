@@ -2,20 +2,20 @@ package com.java.oop;
 
 public class Customer {
 
-    int id;
-    String name;
-    int age;
-    long mobileNumber;
-    String email;
-    String address;
-    boolean isAvailable;
+    public int id;
+    public String name;
+    public int age;
+    public long mobileNumber;
+    public String email;
+    public String address;
+    public boolean isAvailable;
 
     Customer(){
         System.out.println("Customer() Function is called.");
         id = 101;
         name = "Shiva";
         age = 28;
-        mobileNumber = 387765321;
+        mobileNumber = 8877665321L;
         email = "shiva2804@gmail.com";
         address = "Vijayanagar Colony";
         isAvailable = true;

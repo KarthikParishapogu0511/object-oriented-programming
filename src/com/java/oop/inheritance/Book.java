@@ -1,0 +1,26 @@
+package com.java.oop.inheritance;
+
+public class Book extends Product{
+
+    String author;
+    int pages;
+    String publisher;
+
+    public Book() {
+        System.out.println("Book Constructor Called");
+    }
+
+    public Book(int id, String name, int maxRetailPrice, float discountPercentage, float rating, boolean isAvailable, String author, int pages, String publisher) {
+        super(id, name, maxRetailPrice, discountPercentage, rating, isAvailable);
+        this.author = author;
+        this.pages = pages;
+        this.publisher = publisher;
+    }
+
+    void displayBookDetails(){
+        displayProductDetails();
+        System.out.println("Author : " + author);
+        System.out.println("Pages : " + pages);
+        System.out.println("Publisher : " + publisher);
+    }
+}

@@ -16,4 +16,26 @@ public class Service {
 //    void validate(Book book){
 //        System.out.println("Validating Book");
 //    }
+
+//    void displayProductDetails(Product product){
+//        product.displayProductDetails();
+//    }
+//
+//    void displayLaptopDetails(Laptop laptop){
+//        laptop.displayLaptopDetails();
+//    }
+//
+//    void displayBookDetails(Book book){
+//        book.displayBookDetails();
+//    }
+//
+//    void displayWindowLaptopDetails(WindowsLaptop windowsLaptop){
+//          windowsLaptop.displayWindowsLaptopDetails();
+//    }
+
+    void displayDetails(Product product){
+        product.displayDetails();
+    }
+
+
 }

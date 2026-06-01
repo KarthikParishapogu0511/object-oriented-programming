@@ -22,7 +22,7 @@ public class Product {
         this.isAvailable = isAvailable;
     }
 
-    void displayProductDetails(){
+    void displayDetails(){
         System.out.println("------- Product Details --------");
         System.out.println("Id : " + id);
         System.out.println("Name : " + name);
@@ -31,4 +31,13 @@ public class Product {
         System.out.println("Rating : " + rating);
         System.out.println("Is Available : " + isAvailable);
     }
+
+    void displayDetails(String company){
+        System.out.println("Company : "+ company);
+    }
+
+    void displayDetails(String company,int year){
+        System.out.println("Company : "+ company + " Year : " + year);
+    }
+
 }

@@ -7,5 +7,7 @@ public class WindowsLaptop extends Laptop{
         System.out.println("Windows Constructor called");
     }
 
-
+    public WindowsLaptop(int id, String name, int maxRetailPrice, float discountPercentage, float rating, boolean isAvailable, int hardDiskSize, int ram, String operatingSystem) {
+        super(id, name, maxRetailPrice, discountPercentage, rating, isAvailable, hardDiskSize, ram, operatingSystem);
+    }
 }

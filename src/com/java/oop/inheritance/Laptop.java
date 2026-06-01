@@ -17,11 +17,15 @@ public class Laptop extends Product{
         this.ram = ram;
         this.operatingSystem = operatingSystem;
     }
-
-    void displayLaptopDetails(){
-        displayProductDetails();
+    @Override
+    void displayDetails(){
+        super.displayDetails();
         System.out.println("Hard Disk Size : " + hardDiskSize);
         System.out.println("Ram : " + ram);
         System.out.println("Operating System : " + operatingSystem);
+    }
+
+    void displayDetails(String company,int year,boolean isAvailable){
+        System.out.println("Company : " + company + "Year : " + year + "Is Available : " + isAvailable);
     }
 }

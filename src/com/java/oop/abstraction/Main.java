@@ -29,39 +29,52 @@ public class Main {
         OrderService orderService;
         Payment payment;
         double amount;
+        int otp;
         switch (choice){
             case 1:
 //                System.out.println("Processing order using cash");
                 //Payment payment = new Payment();
-                payment = new CashOnDeliveryPayment();
+                payment = new CashOnDeliveryPayment("1","madhu","09-09-26","cash on delivery");
                 orderService = new OrderService(payment);
                 System.out.println("Enter Amount : ");
                 amount = scanner.nextDouble();
+                System.out.println("Enter OTP :");
+                otp = scanner.nextInt();
+                payment.otpValidation(otp);
                 if(orderService.processOrder(amount))
                     System.out.println("Order Processed Completely using cash");
                 break;
             case 2:
                 //System.out.println("Processing order using Credit Card");
-                payment = new CreditCardPayment();
+                payment = new CreditCardPayment("2","madhu","19-09-26","credit card");
                 orderService = new OrderService(payment);
                 System.out.println("Enter Amount : ");
                 amount = scanner.nextDouble();
+                System.out.println("Enter OTP :");
+                otp = scanner.nextInt();
+                payment.otpValidation(otp);
                 if(orderService.processOrder(amount))
                     System.out.println("Order Processed Completely using Credit Card");
                 break;
             case 3:
-                payment = new DebitCardPayment();
+                payment = new DebitCardPayment("3","madhu","29-09-26","Debit Card");
                 orderService = new OrderService(payment);
                 System.out.println("Enter Amount : ");
                  amount = scanner.nextDouble();
+                System.out.println("Enter OTP :");
+                otp = scanner.nextInt();
+                payment.otpValidation(otp);
                 if(orderService.processOrder(amount))
                     System.out.println("Order Processed Completely using Debit Card");
                 break;
             case 4:
-                payment = new UpiPayment();
+                payment = new UpiPayment("4","madhu","09-10-26","UPI delivery");
                 orderService = new OrderService(payment);
                 System.out.println("Enter Amount : ");
                 amount = scanner.nextDouble();
+                System.out.println("Enter OTP :");
+                otp = scanner.nextInt();
+                payment.otpValidation(otp);
                 if(orderService.processOrder(amount))
                     System.out.println("Order Processed Completely using UPI");
                 break;

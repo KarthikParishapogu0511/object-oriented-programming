@@ -11,7 +11,7 @@ public class DebitCardPayment extends Payment{
         System.out.println("Payment done using Successfully : " + amount);
         return true;
     }
-/*
+    /*
     @Override
     public void otpValidation(int otp) {
         System.out.println("OTP validated : " + otp);

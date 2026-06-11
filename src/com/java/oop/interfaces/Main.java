@@ -1,4 +1,6 @@
-package com.java.oop.abstraction;
+package com.java.oop.interfaces;
+
+
 
 import java.util.Scanner;
 
@@ -34,47 +36,47 @@ public class Main {
             case 1:
 //                System.out.println("Processing order using cash");
                 //Payment payment = new Payment();
-                payment = new CashOnDeliveryPayment("1","Madhu","09-09-26","cash on delivery");
+                payment = new CashOnDeliveryPayment();
                 orderService = new OrderService(payment);
                 System.out.println("Enter Amount : ");
                 amount = scanner.nextDouble();
-                System.out.println("Enter OTP :");
-                otp = scanner.nextInt();
-                payment.otpValidation(otp);
+//                System.out.println("Enter OTP :");
+//                otp = scanner.nextInt();
+//                payment.otpValidation(otp);
                 if(orderService.processOrder(amount))
                     System.out.println("Order Processed Completely using cash");
                 break;
             case 2:
                 //System.out.println("Processing order using Credit Card");
-                payment = new CreditCardPayment("2","Madhu","19-09-26","credit card");
+                payment = new CreditCardPayment();
                 orderService = new OrderService(payment);
                 System.out.println("Enter Amount : ");
                 amount = scanner.nextDouble();
-                System.out.println("Enter OTP :");
-                otp = scanner.nextInt();
-                payment.otpValidation(otp);
+//                System.out.println("Enter OTP :");
+//                otp = scanner.nextInt();
+//                payment.otpValidation(otp);
                 if(orderService.processOrder(amount))
                     System.out.println("Order Processed Completely using Credit Card");
                 break;
             case 3:
-                payment = new DebitCardPayment("3","Madhu","29-09-26","Debit Card");
+                payment = new DebitCardPayment();
                 orderService = new OrderService(payment);
                 System.out.println("Enter Amount : ");
-                 amount = scanner.nextDouble();
-                System.out.println("Enter OTP :");
-                otp = scanner.nextInt();
-                payment.otpValidation(otp);
+                amount = scanner.nextDouble();
+//                System.out.println("Enter OTP :");
+//                otp = scanner.nextInt();
+//                payment.otpValidation(otp);
                 if(orderService.processOrder(amount))
                     System.out.println("Order Processed Completely using Debit Card");
                 break;
             case 4:
-                payment = new UpiPayment("4","Madhu","09-10-26","UPI delivery");
+                payment = new UpiPayment();
                 orderService = new OrderService(payment);
                 System.out.println("Enter Amount : ");
                 amount = scanner.nextDouble();
-                System.out.println("Enter OTP :");
-                otp = scanner.nextInt();
-                payment.otpValidation(otp);
+//                System.out.println("Enter OTP :");
+//                otp = scanner.nextInt();
+//                payment.otpValidation(otp);
                 if(orderService.processOrder(amount))
                     System.out.println("Order Processed Completely using UPI");
                 break;

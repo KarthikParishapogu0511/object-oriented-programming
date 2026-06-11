@@ -23,7 +23,6 @@ public class OrderService {
      */
 
     public boolean processOrder(double amount){
-        //payment.otpValidation();
         return payment.pay(amount);
     }
 }

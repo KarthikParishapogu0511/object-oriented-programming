@@ -61,5 +61,10 @@ public class Main {
         for(char gender : genders){
             System.out.println(gender);
         }
+
+        // Problems with Array is
+        //Size
+        // Either underutilized  or over-utilized
+        //Type
     }
 }

@@ -3,8 +3,11 @@ package com.java.oop.collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class SetTest {
+
+    // HashSet is an unordered, non-duplicate collection of elements
     public static void main(String[] args) {
         Set set = new HashSet();
         set.add(1);
@@ -60,5 +63,14 @@ public class SetTest {
             String name = iterator.next();
             System.out.println(name.toUpperCase());
         }
+
+        // tree Set Demo
+        //it does on the natural ordering
+        Set<String> emails = new TreeSet<>();
+        emails.add("amitaa42@gmail.com");
+        emails.add("sarita35@gmail.com");
+        emails.add("namita64@gmail.com");
+        emails.add("kushi67@gmail.com");
+        System.out.println(emails);
     }
 }

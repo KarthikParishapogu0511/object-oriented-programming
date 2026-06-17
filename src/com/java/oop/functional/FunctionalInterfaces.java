@@ -27,5 +27,6 @@ public class FunctionalInterfaces {
             System.out.println("Address " + customer1.getAddress());
         };
         printConsumer.accept(customer);
+
     }
 }

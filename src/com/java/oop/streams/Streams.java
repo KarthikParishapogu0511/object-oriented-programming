@@ -8,6 +8,7 @@ public class Streams {
     public static void main(String[] args) throws IOException {
         CsvReader csvReader = new CsvReader();
         List<Product> products = csvReader.getProductsFromCsvReader();
+        System.out.println(products.size());
 
         //In Intermediate operations first method we have is
         // filter Method
@@ -26,5 +27,36 @@ public class Streams {
                 .toList();
 
         System.out.println(filteredProducts1);
+
+        System.out.println("-------------------------");
+        System.out.println("using Streams Printing Names of Every Product");
+        List<String> productNames ;
+        productNames = products.stream().map(Product::getName).toList();
+        //here :: is called method Reference it is equivalent to Product -> getNames() method
+        System.out.println(productNames);
+
+        System.out.println("using Streams List of Distinct Products");
+        List<Product> nonDuplicateProducts = products.stream().distinct().toList();
+        System.out.println(nonDuplicateProducts.size());
+
+        //Sorted based on PRICE
+        List<Product> sortedProductsBasedOnPrice;
+        sortedProductsBasedOnPrice = products.stream().sorted((p1,p2) ->Double.compare(p1.getMaxRetailPrice(),  p2.getMaxRetailPrice())).toList();
+        System.out.println(sortedProductsBasedOnPrice);
+
+        // Sorted based on Name using sorted(Comparator)
+        List<Product> sortedProductsBasedOnNames;
+        sortedProductsBasedOnNames = products.stream().sorted((p1,p2) -> p1.getName().compareTo(p2.getName())).toList();
+        System.out.println(sortedProductsBasedOnNames);
+
+        // top5 highest Priced Products using limit() func
+        List<Product> top5highestPricedProducts;
+        top5highestPricedProducts = products.stream().sorted((p1,p2)-> Double.compare(p2.getMaxRetailPrice(),  p1.getMaxRetailPrice())).limit(5).toList();
+        System.out.println(top5highestPricedProducts);
+
+        //using forEach
+        products.forEach(System.out::println);
+        // It prints all the Product Data
+
     }
 }

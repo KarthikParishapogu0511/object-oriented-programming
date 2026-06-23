@@ -7,9 +7,14 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Streams {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         CsvReader csvReader = new CsvReader();
-        List<Product> products = csvReader.getProductsFromCsvReader();
+        List<Product> products = null;
+        try {
+            products = csvReader.getProductsFromCsvReader();
+        } catch (IOException e) {
+            System.out.println("Error reading from csv file" + e.getMessage());
+        }
         System.out.println(products.size());
 
         //In Intermediate operations first method we have is

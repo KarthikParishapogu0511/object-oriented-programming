@@ -3,6 +3,8 @@ package com.java.oop.streams;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Streams {
     public static void main(String[] args) throws IOException {
@@ -58,5 +60,34 @@ public class Streams {
         products.forEach(System.out::println);
         // It prints all the Product Data
 
+
+        // Grouping of products base on companies
+        Map<String,List<Product>> productsByCompany = products.stream().collect(Collectors.groupingBy(Product::getCompany));
+        System.out.println("--------Products By Company----------");
+        System.out.println(productsByCompany);
+
+        Map<String,Long> productsCountByCategory;
+        productsCountByCategory = products.stream().collect(Collectors.groupingBy(Product::getCategory,Collectors.counting()));
+        System.out.println("----------Products Count By Category----------");
+        System.out.println(productsCountByCategory);
+
+
+//        Map<String,Long> productsCountByCompany;
+         products.stream().collect(Collectors.groupingBy(Product::getCompany,Collectors.counting())).forEach((company,count)->{
+             System.out.println(company + " : " + count);
+         });
+
+//        System.out.println("----------Products Count By Company----------");
+//        System.out.println(productsCountByCompany);
+
+
+        // total Company Inventory
+        long  totalInventoryValue = products.stream().mapToLong(Product::getMaxRetailPrice).sum();
+        System.out.println("Total Inventory Value : "  + totalInventoryValue);
+        long totalInventoryValue1 = products.stream().collect(Collectors.summingLong(Product::getMaxRetailPrice));
+        System.out.println("Total Inventory Value : "  + totalInventoryValue1);
+
+        double avgPrice = products.stream().mapToDouble(Product::getMaxRetailPrice).average().orElse(0);
+        System.out.println("Average Price : "  + avgPrice);
     }
 }
